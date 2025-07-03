@@ -210,4 +210,26 @@ public class Recorsion {
        }
     }
 
-    
+  //PRINT SUM OF N NATURAL NUMBER BUT ALTERNATE SINGH.
+  import java.util.Scanner;
+
+public class Recorsion {
+ static int SUM(int q){
+     //base case
+     if(q==0){
+         return 0;
+     }
+     //recursive work
+     //IF Q IS EVEN
+     if(q%2==0){
+         return SUM(q-1)-q;
+     }
+     //IF Q IS ODD
+     return SUM(q-1)+q;
+        }
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int p= sc.nextInt();
+       System.out.println(SUM(p));
+       }
+    }
