@@ -161,3 +161,53 @@ public class Recorsion {
        System.out.println(power(p,q));
        }
     }
+//print k multiple of nth number.
+
+import java.util.Scanner;
+
+public class Recorsion {
+ static void multiple(int p,int q){
+     //base case
+     if(q==1){
+         System.out.println(p);
+         return ;
+     }
+     //recursive work
+     multiple(p,q-1);
+     //self work
+     System.out.println(p*q);
+
+ }
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int p= sc.nextInt();
+       int q= sc.nextInt();
+       multiple(p,q);
+       }
+    }
+    //print decreasing order.
+import java.util.Scanner;
+
+public class Recorsion {
+ static void multiple(int p,int q){
+     //base case
+     if(q==1){
+         System.out.println(p);
+         return ;
+     }
+     //self work
+     System.out.println(p*q);
+     //recursive work
+     multiple(p,q-1);
+    
+
+ }
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int p= sc.nextInt();
+       int q= sc.nextInt();
+       multiple(p,q);
+       }
+    }
+
+    
