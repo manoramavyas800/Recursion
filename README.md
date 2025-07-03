@@ -119,3 +119,45 @@ public class Main {
         System.out.println(SOD(n));
     }
 }
+//PRINT POWER.
+
+import java.util.Scanner;
+
+public class Recorsion {
+ static int power(int p,int q){
+     if(q==0){
+         return 1;
+     }
+     int power=power(p,q-1);
+     return p*power;
+ }
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int p= sc.nextInt();
+       int q= sc.nextInt();
+       System.out.println(power(p,q));
+       }
+    }
+    //SECOND METHODE.
+
+    import java.util.Scanner;
+
+public class Recorsion {
+ static int power(int p,int q){
+     if(q==0){
+         return 1;
+     }
+     //if q is even
+     if(q%2==0){
+         return power(p,q/2)*power(p,q/2);
+     }
+     //if q is odd.
+     return  power(p,q/2)*power(p,q/2)*p;
+ }
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int p= sc.nextInt();
+       int q= sc.nextInt();
+       System.out.println(power(p,q));
+       }
+    }
