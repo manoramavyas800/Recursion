@@ -119,6 +119,7 @@ public class Main {
         System.out.println(SOD(n));
     }
 }
+
 //PRINT POWER.
 
 import java.util.Scanner;
@@ -233,3 +234,21 @@ public class Recorsion {
        System.out.println(SUM(p));
        }
     }
+    //SUM OF TWO DIGIT.
+
+    import java.util.Scanner;
+
+public class Main {
+    static int dif(int n,int m) {
+        if(m==0){
+            return n;
+        }
+        return dif(n+1,m-1);
+    }
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int n = sc.nextInt();
+       int k = sc.nextInt();
+       System.out.println(dif(n,k));
+    }
+}
