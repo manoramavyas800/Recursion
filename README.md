@@ -270,3 +270,26 @@ public class Main {
        System.out.println(dif(n,k));
     }
 }
+// PRINT LCM.
+
+import java.util.Scanner;
+
+public class Recursion {
+    static int GCD(int n, int m) {
+       if(m==0){
+           return n;
+       }
+        return GCD(m,n%m);
+    }
+    static int LCM(int n, int m) {
+        return (n*m)/GCD(n,m);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int m = sc.nextInt();
+        int result = LCM(n, m);
+        System.out.println(result);
+
+    }
+}
