@@ -341,3 +341,28 @@ public class Recursion {
 
     }
 }
+//PRINT MAX NUM IN ARR.
+
+import java.util.Scanner;
+
+public class Recursion {
+   static int printArray(int[] arr, int idx) {
+       if (idx == arr.length-1) {
+           return arr[idx];
+       }
+      int smalAns=printArray(arr, idx+1);
+       return Math.max(smalAns, arr[idx]);
+
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+           int max= printArray(arr, 0);
+        System.out.println(max);
+
+    }
+}
