@@ -505,13 +505,13 @@ public class Recursion {
        findAllIndises(arr,n,target,0);
     }
 }
-//RETURN  ALL INDISES IN ARRAYLIST.
+//RETURN  ALL INDICES IN ARRAYLIST.
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Recursion {
-  static ArrayList<Integer> findAllIndises(int[]arr,int n,int target,int idx){
+  static ArrayList<Integer> findAllIndiCes(int[]arr,int n,int target,int idx){
       if(idx>=n){
           return  new ArrayList<>();
       }
@@ -519,7 +519,7 @@ public class Recursion {
       if(arr[idx]==target) {
           res.add(idx);
       }
-      ArrayList<Integer> tmp = findAllIndises(arr,n,target,idx+1);
+      ArrayList<Integer> tmp = findAllIndiCes(arr,n,target,idx+1);
       res.addAll(tmp);
       return res;
 
@@ -532,7 +532,7 @@ public class Recursion {
         for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
-       ArrayList<Integer> res = findAllIndises(arr,n,target,0);
+       ArrayList<Integer> res = findAllIndiCes(arr,n,target,0);
         System.out.println(res);
     }
 }
