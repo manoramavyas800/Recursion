@@ -391,3 +391,32 @@ public class Recursion {
 
     }
 }
+//fiind target is present or not.
+
+import java.util.Scanner;
+
+public class Recursion {
+   static boolean printArray(int[] arr,int n,int target, int idx) {
+       if (idx >= n) {
+           return false;
+       }
+       if (arr[idx] == target)return true;
+       return printArray(arr,n,target, idx+1);
+
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int target=sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        if(printArray(arr,target,arr.length,0)){
+            System.out.println("YES");
+        }else{
+            System.out.println("NO");
+        }
+    }
+}
