@@ -562,3 +562,30 @@ public class Recursion {
         findAllIndises(arr,t,target,0);
     }
 }
+//chack array is sorted.
+
+import java.util.Scanner;
+public class Recursion {
+   static boolean chackSortArray(int[] arr, int n,int idx) {
+       //base case
+       if(idx>=n-1){
+           return true ;
+       }
+       //self work
+       if(arr[idx]>arr[idx+1]){
+           return false ;
+       }
+       //recursive work
+       return chackSortArray(arr,n,idx+1);
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t=sc.nextInt();
+        int[] arr = new int[t];
+        for (int i = 0; i < t; i++) {
+            arr[i] = sc.nextInt();
+        }
+       boolean isSorted = chackSortArray(arr,arr.length,0);
+        System.out.println(isSorted);
+    }
+}
