@@ -617,3 +617,25 @@ public class Recursion {
         System.out.println(findTarget);
     }
 }
+//remove all accurrence of a in String.
+
+import java.util.Scanner;
+public class Recursion {
+   static String removeAllAccurrences(String str) {
+       if(str.isEmpty()) {
+           return "";
+       }
+           char ch = str.charAt(0);
+           if (ch == 'a') {
+               return removeAllAccurrences(str.substring(1));
+           } else {
+               return ch + removeAllAccurrences(str.substring(1));
+       }
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+       System.out.println(removeAllAccurrences(str));
+
+    }
+}
