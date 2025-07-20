@@ -589,3 +589,31 @@ public class Recursion {
         System.out.println(isSorted);
     }
 }
+//find last index of target in arr
+
+import java.util.Scanner;
+public class Recursion {
+   static int findTarget(int[] arr,int target,int idx) {
+       //base case
+       if(idx<0){
+           return -1;
+       }
+       //self work
+       if(arr[idx]==target) {
+           return idx;
+       }
+       //recursive work
+      return findTarget(arr,target,idx-1);
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t=sc.nextInt();
+        int target=sc.nextInt();
+        int[] arr = new int[t];
+        for (int i = 0; i < t; i++) {
+            arr[i] = sc.nextInt();
+        }
+       int findTarget = findTarget(arr,target,arr.length-1);
+        System.out.println(findTarget);
+    }
+}
