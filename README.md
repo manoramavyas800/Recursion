@@ -536,3 +536,29 @@ public class Recursion {
         System.out.println(res);
     }
 }
+//find all index.
+
+import java.util.Scanner;
+
+public class Recursion {
+   static void findAllIndises(int[] arr,int n,int target,int idx){
+       //base case
+       if(idx>=n){
+           return;
+       }
+       if(arr[idx]==target){
+           System.out.println(idx);
+       }
+       findAllIndises(arr,n,target,idx+1);
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t=sc.nextInt();
+        int target=sc.nextInt();
+        int[] arr = new int[t];
+        for (int i = 0; i < t; i++) {
+            arr[i] = sc.nextInt();
+        }
+        findAllIndises(arr,t,target,0);
+    }
+}
